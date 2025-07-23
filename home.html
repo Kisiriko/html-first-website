@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAACO FORM</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main>
+    <h1>SAACO FORM</h1>
+
+    <form method="post" action="#">
+
+      <fieldset>
+        <h2>Personal Information</h2>
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" placeholder="Enter Name" />
+
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" />
+
+        <label>Gender</label>
+        <input type="radio" id="female" name="gender" value="Female" />
+        <label for="female">Female</label>
+        <input type="radio" id="male" name="gender" value="Male" />
+        <label for="male">Male</label>
+
+        <label for="nationality">Nationality</label>
+        <input type="text" id="nationality" name="nationality" />
+
+        <label for="id-number">National ID Number / Passport Number</label>
+        <input type="text" id="id-number" name="id-number" />
+
+        <label>Marital Status</label>
+        <input type="radio" id="single" name="marital-status" value="Single" />
+        <label for="single">Single</label>
+        <input type="radio" id="married" name="marital-status" value="Married" />
+        <label for="married">Married</label>
+        <input type="radio" id="divorced" name="marital-status" value="Divorced" />
+        <label for="divorced">Divorced</label>
+        <input type="radio" id="widowed" name="marital-status" value="Widowed" />
+        <label for="widowed">Widowed</label>
+      </fieldset>
+
+      <fieldset>
+        <h2>Contact Information</h2>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" />
+
+        <label for="alt-phone">Phone Number (Alternative)</label>
+        <input type="tel" id="alt-phone" name="alt-phone" />
+
+        <label for="email">Email Address (if available)</label>
+        <input type="email" id="email" name="email" />
+
+        <label>Residential Address</label>
+        <input type="text" name="village" placeholder="Village" />
+        <input type="text" name="parish" placeholder="Parish" />
+        <input type="text" name="subcounty" placeholder="Sub-county" />
+        <input type="text" name="district" placeholder="District" />
+      </fieldset>
+
+      <fieldset>
+        <h2>Next of Kin</h2>
+        <label for="nok-name">Full Name</label>
+        <input type="text" id="nok-name" name="nok-name" placeholder="e.g. Kisaka Rajab" />
+
+        <label for="relationship">Relationship</label>
+        <input type="text" id="relationship" name="relationship" />
+
+        <label for="nok-phone">Phone Number</label>
+        <input type="tel" id="nok-phone" name="nok-phone" />
+
+        <label for="nok-address">Address</label>
+        <input type="text" id="nok-address" name="nok-address" />
+      </fieldset>
+
+      <fieldset>
+        <h2>Employment / Source of Income</h2>
+        <label for="occupation">Occupation</label>
+        <input type="text" id="occupation" name="occupation" />
+
+        <label for="employer">Employer (if applicable)</label>
+        <input type="text" id="employer" name="employer" />
+
+        <label for="business-type">Business Type (if self-employed)</label>
+        <input type="text" id="business-type" name="business-type" />
+
+        <label for="income">Monthly Income Estimate</label>
+        <input type="text" id="income" name="income" />
+      </fieldset>
+
+      <fieldset>
+        <h2>Account Preferences</h2>
+        <p><strong>Type of Membership:</strong></p>
+        <input type="radio" id="individual" name="membership" value="Individual" />
+        <label for="individual">Individual</label>
+        <input type="radio" id="group" name="membership" value="Group" />
+        <label for="group">Group</label>
+        <input type="radio" id="corporate" name="membership" value="Corporate" />
+        <label for="corporate">Corporate</label>
+
+        <p><strong>Account Type:</strong></p>
+        <input type="checkbox" id="savings" name="account-type" value="Savings" />
+        <label for="savings">Savings</label>
+        <input type="checkbox" id="loan" name="account-type" value="Loan" />
+        <label for="loan">Loan</label>
+        <input type="checkbox" id="share-capital" name="account-type" value="Share Capital" />
+        <label for="share-capital">Share Capital</label>
+
+        <p><strong>Preferred Mode of Communication:</strong></p>
+        <input type="checkbox" id="sms" name="communication" value="SMS" />
+        <label for="sms">SMS</label>
+        <input type="checkbox" id="phone-call" name="communication" value="Phone Call" />
+        <label for="phone-call">Phone Call</label>
+        <input type="checkbox" id="email-comm" name="communication" value="Email" />
+        <label for="email-comm">Email</label>
+      </fieldset>
+
+      <fieldset>
+        <h2>Financial Information</h2>
+        <label for="initial-deposit">Initial Deposit Amount</label>
+        <input type="number" id="initial-deposit" name="initial-deposit" />
+
+        <label for="monthly-savings">Monthly Savings Commitment</label>
+        <input type="number" id="monthly-savings" name="monthly-savings" />
+
+        <label><strong>Preferred Payment Method:</strong></label>
+        <input type="checkbox" id="mcash" name="payment-method" value="Mcash Wallet" />
+        <label for="mcash">Mcash Wallet</label>
+        <input type="checkbox" id="mobile-money" name="payment-method" value="Mobile Money" />
+        <label for="mobile-money">Mobile Money</label>
+        <input type="checkbox" id="bank" name="payment-method" value="Bank Transfer" />
+        <label for="bank">Bank Transfer</label>
+
+        <label for="mm-number">Mobile Money Number (if applicable)</label>
+        <input type="tel" id="mm-number" name="mm-number" placeholder="0708-256-440" />
+      </fieldset>
+
+      <fieldset>
+        <h2>Declaration and Signature</h2>
+        <p>
+          I hereby declare that the above information is true and correct to the best of my knowledge.
+          I agree to abide by the <strong>SACCO’s rules and regulations.</strong>
+        </p>
+        <input type="submit" value="Submit Form" />
+      </fieldset>
+
+    </form>
+  </main>
+
+</body>
+</html>

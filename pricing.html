@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing | e-Fund SACCO</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+       padding-top: 100px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+    }
+
+    header {
+       position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+     background: #cfcaca;
+      color: rgb(68, 66, 60);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+       width: 100px;
+      height:auto;
+      transform: scale(1.5);
+      background-origin: auto;
+    }
+
+    nav a {
+     color: #3d505a;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 1000;
+      transition: color 0.3s ease;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: x-large;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+      color: #f7941e;
+    }
+nav a:nth-child(1)::before {
+  content: "\f015"; /* Home icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e;
+}
+
+nav a:nth-child(2)::before {
+  content: "\f013"; /* Gear icon for Features */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+nav a:nth-child(3)::before {
+  content: "\f155"; /* Dollar sign for Pricing */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+nav a:nth-child(4)::before {
+  content: "\f095"; /* Phone for Contact */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+
+    .pricing-section {
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .pricing-section h1 {
+      font-size: 2.5rem;
+      color: #fdfcfc;
+    }
+
+    .pricing-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 2px solid #313030;
+      border-radius: 12px;
+      width: 280px;
+      padding: 2rem;
+      font-weight: 1000;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(243, 236, 236, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      border-color: #3f3939;
+    }
+
+   .card h3 {
+  background-color: #cfcaca;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  color: #2b2929;
+}
+
+
+    .card p {
+      color: #5c5858;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card .price {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .card button {
+      background: #f7941e;
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: backgroun 0.3s;
+    }
+
+    .card button:hover {
+      background:#f7941e;
+    }
+
+    @media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  footer > div {
+    flex-direction: column;
+  }
+}
+
+
+    footer {
+      background: #222;
+      color: #5f5c5c;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 1rem;
+    }
+
+    .footer-section h3 {
+      color:#f7941e;
+    }
+
+    .footer-section a,
+    .footer-section p {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .footer-section a:hover {
+      color: #fff;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="c:\Users\USER\Desktop\INTERN\wawaa\61a2918ac8291d0c7816237d_61891c7ec78c65f425357f02_logo2 (1).png" alt="mCash Logo">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    </div>
+    
+<nav>
+  <a href="index.html">Home</a>
+  <a href="features.html">Features</a>
+  <a href="pricing.html">Pricing</a>
+ 
+  <a href="get-in-touch.html">Get in Touch</a>
+</nav>
+
+  </header>
+  
+    <h style=" text-align:center; font-size:xx-large; font-weight: bold; color: #f7941e;" >OUR PRICING  </h>
+  <div class="pricing-cards">
+  <div class="card">
+   
+    <h3>Basic</h3>
+    <p>Ideal for small SACCOs starting out</p>
+    <div class="price">UGX 25,000/mo</div>
+    <p>
+      ✔ Member Management<br>
+      ✔ Savings Tracking<br>
+      ✔ Mobile Friendly<br>
+      ✔ Email Support
+    </p>
+    <button onclick="window.location.href='get-in-touch.html'">Get Started</button>
+  </div>
+
+  <div class="card">
+    <h3>Standard</h3>
+    <p>For growing SACCOs with more needs</p>
+    <div class="price">UGX 50,000/mo</div>
+    <p>
+      ✔ All Basic Features<br>
+      ✔ Loan Processing<br>
+      ✔ Event Scheduling<br>
+      ✔ Group Messaging<br>
+      ✔ Priority Support
+    </p>
+    <button onclick="window.location.href='get-in-touch.html'">Select Plan</button>
+  </div>
+
+  <div class="card">
+    <h3>Pro</h3>
+    <p>Best for large SACCOs with complex needs</p>
+    <div class="price">UGX 100,000/mo</div>
+    <p>
+      ✔ All Standard Features<br>
+      ✔ Custom Dashboards<br>
+      ✔ Bulk SMS Messaging<br>
+      ✔ Analytics & Reports<br>
+      ✔ Dedicated Account Manager
+    </p>
+    <button onclick="window.location.href='get-in-touch.html'">Join Now</button>
+  </div>
+</div>
+
+</section>
+
+<!-- FAQ Section -->
+<section style="background-color: #f2f2f2; padding: 3rem 2rem; text-align: center;">
+  <h2 style="color: #1a345e; font-size: 2rem; margin-bottom: 2rem;">Frequently Asked Questions</h2>
+  <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color: #f7941e; font-size: x-large;">What is included in each plan?</h4>
+      <p style="color: #1a345e;">Each plan includes core SACCO management features. Higher plans add advanced tools like analytics, bulk messaging, and custom dashboards.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color:#f7941e; font-size: x-large;" >Can I change my plan later?</h4>
+      <p style="color:#1a345e; font-size: large;">Yes! You can upgrade or downgrade your plan at any time based on your SACCO’s needs.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color:  #f7941e; font-size: x-large;">Is there a setup or onboarding fee?</h4>
+      <p style="color: #1a345e;">No, we provide free onboarding assistance and setup to get you started quickly.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color:#f7941e; font-size: x-large;">Is there a mobile version?</h4>
+      <p style="color:#1a345e;">Yes, the system is fully mobile-responsive and works great on phones and tablets.</p>
+    </div>
+    <div style="margin-bottom: 1.5rem;">
+      <h4 style="color:  #f7941e; font-size: x-large;">What if I'm not satisfied?</h4>
+      <p style="color: #1a345e;">We offer a 14-day money-back guarantee. Your satisfaction is our priority.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section style="background: linear-gradient(to right, #f7941e, #f7941e); color: #fff; text-align: center; padding: 3rem 2rem;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Digitize Your SACCO?</h2>
+  <p style="font-size: 1.2rem; margin-bottom: 2rem;">Choose the plan that fits your needs and get started today.</p>
+  <a href="get-in-touch.html" style="background: #fff; color:  #f7941e; padding: 1rem 2rem; border-radius: 6px; font-weight: bold; text-decoration: none; transition: all 0.3s ease;">Get Started Now</a>
+</section>
+
+<!-- Money-Back Guarantee -->
+<section style="background-color: #e7e7e7; padding: 2rem 2rem; text-align: center;">
+  <h3 style="color: #333;">100% Risk-Free with a 14-Day Money-Back Guarantee</h3>
+  <p style="color: #555; max-width: 700px; margin: 0 auto; font-size: 1rem;">
+    We’re confident you’ll love e-Fund. But if you’re not satisfied within the first 14 days, we’ll refund your money—no questions asked.
+  </p>
+</section>
+
+<!-- Redesigned Savings Calculator with Background Image -->
+<section style="
+  padding: 3rem 2rem;
+  background-image: url('https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80'); 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+">
+  <!-- Overlay -->
+  <div style="
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 2rem;
+    border-radius: 20px;
+  ">
+
+    <h2 style="text-align: center; color: #f7941e; margin-bottom: 2rem;">Savings Calculator</h2>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+      
+      <!-- Input Form -->
+      <div style="background: #ffffff; padding: 2rem; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.04);">
+        <h3 style="color: #f7941e; margin-bottom: 1rem;">Enter Your Details</h3>
+        <label style="display: block; margin-bottom: 1rem;">
+          Monthly Savings Amount (UGX):
+          <input type="number" id="monthlySavings" placeholder="e.g. 100000" style="width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid #ccc;" />
+        </label>
+
+        <label style="display: block; margin-bottom: 1rem;">
+          Duration (in months):
+          <select id="duration" style="width: 100%; padding: 0.6rem; border-radius: 8px; border: 1px solid #ccc;">
+            <option value="6">6 months</option>
+            <option value="12" selected>1 year</option>
+            <option value="24">2 years</option>
+          </select>
+        </label>
+
+        <button onclick="calculateSavings()" style="width: 100%; background-color: #f7941e; color: white; padding: 0.8rem; border: none; border-radius: 10px; font-weight: bold; cursor: pointer;">
+          Calculate Now
+        </button>
+      </div>
+
+      <!-- Results Display -->
+      <div id="result" style="background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.04);">
+        <h3 style="color: #f7941e; margin-bottom: 1rem;">Results</h3>
+        <p><strong>Total Savings:</strong> UGX <span id="totalSavings">-</span></p>
+        <p><strong>Estimated Interest (8%):</strong> UGX <span id="interest">-</span></p>
+        <p><strong>Dividend Estimate (5%):</strong> UGX <span id="dividend">-</span></p>
+        <p><strong>Loan Eligibility (Up to 3x savings):</strong> UGX <span id="loanEligible">-</span></p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  function calculateSavings() {
+    const monthly = parseFloat(document.getElementById("monthlySavings").value);
+    const months = parseInt(document.getElementById("duration").value);
+    if (isNaN(monthly) || monthly <= 0) {
+      alert("Please enter a valid savings amount.");
+      return;
+    }
+
+    const total = monthly * months;
+    const interest = total * 0.08; // 8% interest
+    const dividend = total * 0.05; // 5% dividend
+    const loan = total * 3; // Eligible for 3x loan
+
+    document.getElementById("totalSavings").innerText = total.toLocaleString();
+    document.getElementById("interest").innerText = interest.toLocaleString();
+    document.getElementById("dividend").innerText = dividend.toLocaleString();
+    document.getElementById("loanEligible").innerText = loan.toLocaleString();
+  }
+</script>
+
+<footer style="
+  background: url('https://images.unsplash.com/photo-1607082351780-0743e37b7d99?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  background-blend-mode: lighten;
+  background-color: rgba(94, 88, 88, 0.9);
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+">
+
+  <div style="
+  
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  ">
+
+    <!-- Overview -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Overview</h3>
+      <p style="line-height: 1.6;">
+        mCash is a powerful platform designed to digitize SACCO operations. From onboarding to loans and reports, we bring smart finance tools to your fingertips.
+      </p>
+    </div>
+
+    <!-- Find Us with Map Link -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color:  #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Find Us</h3>
+      <p style="line-height: 1.6;">
+        📍 
+        <a href="https://www.google.com/maps/place/AHA+Towers,+Kampala/@0.322041,32.584292,17z" target="_blank" style="color: #333; text-decoration: none;">
+          AHA Towers, Level 2, Nakasero, Kampala
+        </a><br>
+        📫 Plot 7 Louredel Building<br>
+        📧 info@mcash.ug
+           /  www.mcash.ug<br>
+
+        ☎️ +256 414233799
+      </p>
+    </div>
+
+    <!-- About Us -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">About Us</h3>
+      <p style="line-height: 1.6;">
+        We empower SACCOs and communities across Uganda with secure, user-friendly digital tools to manage finances, encourage savings, and foster financial inclusion.
+      </p>
+      <p>
+        <a href="https://www.mcash.ug" target="_blank" style="color:  #f7941e; font-weight: bold; text-decoration: underline;">
+          🌐 Visit Official Site
+        </a>
+      </p>
+    </div>
+
+    <!-- Quick Links & Social -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color:  #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0; margin-bottom: 1rem;">
+        <li><a href="terms.html" style="color: #333; text-decoration: none;">📄 Terms & Conditions</a></li>
+        <li style="margin-top: 0.5rem;"><a href="privacy.html" style="color: #333; text-decoration: none;">🔒 Privacy Policy</a></li>
+      </ul>
+
+      <h4 style="color: #f7941e; font-size: 1.2rem;">Follow Us</h4>
+      <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+        <a href="https://facebook.com" target="_blank" style="color: #333; font-size: 1.4rem;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" style="color: #333; font-size: 1.4rem;"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank" style="color: #333; font-size: 1.4rem;"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <style>
+    footer a:hover {
+      color:  #f7941e !important;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    footer i:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+</footer>
+
+</html>

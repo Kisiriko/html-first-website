@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Features | e-Fund SACCO</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+
+  <style>
+    body {
+       padding-top: 100px;
+       padding-top: 100px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #222;
+      
+    }
+
+    header {
+       position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+      background: #cfcaca;
+      color: #3d505a;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo img {
+     width: 100px;
+      height:auto;
+      transform: scale(1.5);
+      background-origin: auto;
+    }
+
+    nav a {
+      
+      color: #3d505a;;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 1000;
+      transition: color 0.3s ease;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: x-large;
+    }
+
+    nav a:hover {
+      color: #f7941e;
+    }
+nav a:nth-child(1)::before {
+  content: "\f015"; /* Home icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e;
+}
+
+nav a:nth-child(2)::before {
+  content: "\f013"; /* Gear icon for Features */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+nav a:nth-child(3)::before {
+  content: "\f155"; /* Dollar sign for Pricing */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+nav a:nth-child(4)::before {
+  content: "\f095"; /* Phone for Contact */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .text-content {
+      flex: 1 1 500px;
+      padding: 1rem;
+    }
+
+    .text-content h1 {
+      font-size: 2.5rem;
+      color:  #f7941e;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .text-content p,
+    .text-content ul {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      color:#705759 ;
+      font-family: Arial;
+    }
+
+    .text-content ul {
+      padding-left: 20px;
+    }
+
+    .text-content li {
+      margin-bottom: 0.5rem;
+    }
+
+    .image-content {
+      flex: 1 1 400px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .image-content img {
+      width: 100%;
+      max-width: 450px;
+      border-radius: 15px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background-color: #555352;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-top: 2rem;
+    }
+
+    .back-btn:hover {
+      background-color: #f7941e;
+    }
+    
+.partners-section img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+      opacity: 1;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    footer {
+      background:  #f7941e;
+      color: #eee;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+      margin: 1rem;
+    }
+
+    .footer-section h3 {
+      margin-bottom: 1rem;
+      color:  #f7941e;
+      font-weight: bold;
+    }
+
+    .footer-section p,
+    .footer-section a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    .footer-section a:hover {
+      color: white;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      font-size: 1.4rem;
+      color: #ccc;
+    }
+
+    .social-icons a:hover {
+      color:  #f7941e;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+    }
+    
+     .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      border-top: 4px solid  #f7941e;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card i {
+      font-size: 2.7rem;
+      color:  #f7941e;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: #3d505a;
+    }
+     .feature-card p {
+      font-size: 0.95rem;
+      color: #3d505a ;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="c:\Users\USER\Desktop\INTERN\wawaa\61a2918ac8291d0c7816237d_61891c7ec78c65f425357f02_logo2 (1).png" alt="mCash Logo" />
+  </a>
+  
+<nav>
+  
+ <a href="index.html">Home</a>
+ <a href="features.html">Features</a>
+
+  <a href="pricing.html">Pricing</a>
+  
+  <a href="get-in-touch.html">Get in Touch</a>
+</nav>
+
+</header>
+<body></body>
+
+ <section class="main">
+    <div class="text-content">
+      <h1>Features of e-Fund</h1>
+      <p><strong>At e-Fund SACCO</strong>, we are committed to delivering innovative and member-centered financial solutions. Our platform is designed with features that simplify your saving, borrowing, and financial management experience. Whether you're an individual member, group, or organization, our tailored features ensure convenience, transparency, and security every step of the way. Explore the core functionalities that make e-Fund a trusted digital partner in your financial journey.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <i class="fas fa-user-plus"></i>
+        <h3>Member Onboarding (E-KYC)</h3>
+        <p>Digitally register and verify SACCO members using e-KYC tools.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>USSD Transactions</h3>
+        <p>Deposit, transfer, and apply for loans via USSD codes.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-file-invoice-dollar"></i>
+        <h3>Loan & Expense Management</h3>
+        <p>Track disbursements, repayments, and expenses in real-time.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Share Capital Tracking</h3>
+        <p>Monitor member share contributions effectively.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-balance-scale"></i>
+        <h3>Income/Expense Management</h3>
+        <p>Track income and expenses in real-time for transparency.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-wallet"></i>
+        <h3>mCash E-Wallet</h3>
+        <p>Use a digital wallet for secure savings and transactions.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-users-cog"></i>
+        <h3>User Role Management</h3>
+        <p>Assign different roles and access rights to users.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-comments"></i>
+        <h3>Communication Tools</h3>
+        <p>Send SMS, email & in-app updates to members instantly.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-calculator"></i>
+        <h3>Accounting</h3>
+        <p>Maintain digital ledgers for your SACCO's financials.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Reports</h3>
+        <p>Generate detailed system and finance reports easily.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+</section>
+
+<section style="background-color: #f9f9f9; padding: 3rem 2rem; text-align: center; transform: translateY(30px); animation: fadeInUp 1s ease forwards; animation-delay: 1.2s;">
+  <h2 style="color:  #f7941e; font-size: 2rem; margin-bottom: 2rem;">Our Trusted Partners</h2>
+  
+  <div style= "display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      <img src="c:\Users\USER\Desktop\INTERN\patner\download (3).png" alt="Partner 4" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download (2).jpeg" alt="Partner 1" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download.png" alt="Partner 2" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\images.jpeg" alt="Partner 3" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\images.png" alt="Partner 4" style="height: 80px;" />
+      <img src="c:\Users\USER\Desktop\INTERN\patner\New-mtn-logo.jpg" alt="Partner 3" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download (1).jpeg" alt="Partner 4" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download (2).png" alt="Partner 4" style="height: 80px;" />
+     <style>
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .partners-section img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+      opacity: 1;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</section>
+
+  </div>
+
+
+
+<footer style="
+  background: url('https://images.unsplash.com/photo-1607082351780-0743e37b7d99?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  background-blend-mode: lighten;
+  background-color: #3d505a;
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+ 
+  color: #3d505a;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+">
+
+  <div style="
+  
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  ">
+
+    <!-- Overview -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color:  #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Overview</h3>
+      <p style="line-height: 1.6;">
+        mCash is a powerful platform designed to digitize SACCO operations. From onboarding to loans and reports, we bring smart finance tools to your fingertips.
+      </p>
+    </div>
+
+    <!-- Find Us with Map Link -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color:  #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Find Us</h3>
+      <p style="line-height: 1.6;">
+        📍 
+        <a href="https://www.google.com/maps/place/AHA+Towers,+Kampala/@0.322041,32.584292,17z" target="_blank" style="color: #333; text-decoration: none;">
+          AHA Towers, Level 2, Nakasero, Kampala
+        </a><br>
+        📫 Plot 7 Louredel Building<br>
+        📧 info@mcash.ug
+           /  www.mcash.ug<br>
+
+        ☎️ +256 414233799
+      </p>
+    </div>
+
+    <!-- About Us -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">About Us</h3>
+      <p style="line-height: 1.6;">
+        We empower SACCOs and communities across Uganda with secure, user-friendly digital tools to manage finances, encourage savings, and foster financial inclusion.
+      </p>
+      <p>
+        <a href="https://www.mcash.ug" target="_blank" style="color: #f7941e; font-weight: bold; text-decoration: underline;">
+          🌐 Visit Official Site
+        </a>
+      </p>
+    </div>
+
+    <!-- Quick Links & Social -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color:  #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0; margin-bottom: 1rem;">
+        <li><a href="terms.html" style="color: #3d505a; text-decoration: none;">📄 Terms & Conditions</a></li>
+        <li style="margin-top: 0.5rem;"><a href="privacy.html" style="color: #3d505a; text-decoration: none;">🔒 Privacy Policy</a></li>
+      </ul>
+
+      <h4 style="color: #f7941e; font-size: 1.2rem;">Follow Us</h4>
+      <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+        <a href="https://facebook.com" target="_blank" style="color: #3d505a; font-size: 1.4rem;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" style="color: #3d505a; font-size: 1.4rem;"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank" style="color: #3d505a; font-size: 1.4rem;"><i class="fab fa-linkedin-in"></i></a>
+        
+<p style="text-align: center; font-weight: bold; margin-top: 2rem;">
+  &copy; 2025 e-Fund SACCO. All rights reserved.
+</p>
+
+
+      </div>
+    </div>
+
+  </div>
+  
+
+  <style>
+    footer a:hover {
+      color: #f7941e !important;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    footer i:hover {
+      transform: scale(1.2);
+    }
+  </style>
+
+</footer>
+
+</html>
