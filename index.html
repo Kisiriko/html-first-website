@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>e-Fund SACCO - Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="https://yourdomain.com/favicon.ico" type="image/x-icon" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+       padding-top: 100px;
+      font-family: 'Poppins', sans-serif;
+      background-color: #fff;
+      color:  #3d505a;
+    }
+
+    header {
+       position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+      background: #cfcaca;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+   .logo img {
+     width: 100px;
+      height:auto;
+      transform: scale(1.5);
+      background-origin: auto;
+    }
+
+    nav a {
+      color: #3d505a;;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: 1000;
+      transition: color 0.3s ease;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: x-large;
+    }
+
+    nav a:hover {
+      color:#f7941e;
+    }
+nav a:nth-child(1)::before {
+  content: "\f015"; /* Home icon */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e;
+}
+
+nav a:nth-child(2)::before {
+  content: "\f013"; /* Gear icon for Features */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+nav a:nth-child(3)::before {
+  content: "\f155"; /* Dollar sign for Pricing */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+nav a:nth-child(4)::before {
+  content: "\f095"; /* Phone for Contact */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  margin-right: 8px;
+  color: #f7941e
+}
+
+    /* Hero Section with Carousel */
+    .hero {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .hero .carousel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: slideShow 18s infinite ease-in-out;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      text-shadow: 1px 1px 3px #000;
+    }
+
+    @keyframes slideShow {
+      0%, 100% { background-image: url('https://i.postimg.cc/0N8n6hF7/AHA-Towers-2.webp'); }
+      33% { background-image: url('https://i.postimg.cc/sXm8Z6QB/1726583788040-linkin.jpg');}
+      66% { background-image: url('https://i.postimg.cc/FHWnmWdG/6862f818a5613ab1cd928576-6627ea4c95137a7b53a63443-The20in20-Money20-Building-Wealth-min.webp'); }
+      99% { background-image: url('https://i.postimg.cc/RhZPJyYW/6200e4a12ad0ffb37e98b0c0-home-web-2.jpg'); }
+     
+    }
+
+    .hero .overlay {
+      position: absolute;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .hero button {
+      margin-top: 2rem;
+      background-color: #f7941e;
+      color: #fff;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      font-weight: bolder;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .hero button:hover {
+      background-color: #fff;
+      
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mission & Vision */
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color:  #3d505a;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      flex: 1;
+      min-width: 280px;
+      background: #f7941e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      transition: transform 0.5s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card i {
+      font-size: 2rem;
+      color:  #3d505a;
+      margin-bottom: 15px;
+    }
+
+
+    .scroll-banner {
+  width: 100%;
+  background-color:#f7941e;
+  padding: 10px 0;
+  overflow: hidden;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.scroll-content {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scroll-left 12s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.team-member {
+  background: #5f5e5e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 4px solid #f7941e;
+}
+
+.team-member h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #f7941e;
+}
+
+.team-member p {
+  font-size: 0.95rem;
+  color: #f8f0f0;
+  line-height: 1.4;
+}
+.mission-vision {
+  background: linear-gradient(to right, #f6f6f6, #ffffff);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #3d505a;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.mv-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  align-items: stretch;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.mv-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.mv-card:hover {
+  transform: translateY(-10px);
+}
+
+.mv-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #ccc;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.mv-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.mv-card p {
+  font-size: 1rem;
+  color: #3d505a;
+  line-height: 1.6;
+}
+
+.mv-video {
+  width: 500px;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 1024px) {
+  .mv-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mv-video {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+    /* Footer */
+    footer {
+      background: #3d505a;
+      color: #ddd;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .footer-col {
+      flex: 1 1 250px;
+      margin: 1rem;
+    }
+
+    .footer-col h3 {
+      margin-bottom: 1rem;
+      color: #f7941e;
+    }
+
+    .footer-col a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a:hover {
+      color: #fff;
+    }
+
+    @media(max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1rem;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+@media (max-width: 600px) {
+  .team-member, .flip-card, .card {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="index.html"><img src="c:\Users\USER\Desktop\INTERN\New folder\61a2918ac8291d0c7816237d_61891c7ec78c65f425357f02_logo2.png
+      
+      " alt="e-Fund Logo"></a>
+    <nav>
+      
+      
+      <a href="index.html">Home</a>
+       <a href="features.html">Features</a>
+  <a href="pricing.html">Pricing</a>
+ 
+  <a href="get-in-touch.html">Get in Touch</a>
+</nav>
+
+
+  </header>
+<div class="scroll-banner">
+  <div class="scroll-content">
+    🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO! 🚀 Welcome to e-Fund SACCO!
+  </div>
+</div>
+
+  </div>
+</div>
+  <section class="hero">
+    
+
+  <div class="hero-text">
+    <div class="carousel"></div>
+    <div class="overlay">
+      <h1>what is e-Fund SACCO</h1>
+      <p>e-Fund is a digital platform that helps SACCOs and other financial groups manage savings, loans, and member records efficiently. It allows users to access services like deposits, withdrawals, and loan applications through mobile or online systems. With features like mobile money integration and automated reports, e-Fund improves transparency, convenience, and financial management for both members and administrators.
+</p>
+      <button onclick="window.location.href='features.html'">Explore Features</button>
+    </div>
+  </section>
+
+
+ <p style="margin-top: 2rem; color: #ffffff; text-align: center; font-size: xx-large; background-color:  #f7941e;">We proudly collaborate with leading financial institutions and tech partners across East Africa.</p>
+</section>
+
+<section style="background: url('https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; padding: 4rem 1rem; color: white; text-align: center;">
+  <h2 style="font-size: 2rem; margin-bottom: 2rem; color: #fff; text-shadow: 1px 1px 3px #000;">Our Impact in Numbers</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+    <div style="flex: 1 1 200px; background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 12px;">
+      <i class="fas fa-users" style="font-size: 2.5rem; color: #f7941e;"></i>
+      <h3 style="margin-top: 1rem;">1,200+</h3>
+      <p>Active Members</p>
+    </div>
+    <div style="flex: 1 1 200px; background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 12px;">
+      <i class="fas fa-hand-holding-usd" style="font-size: 2.5rem; color: #f7941e;"></i>
+      <h3 style="margin-top: 1rem;">UGX 250M+</h3>
+      <p>Loans Disbursed</p>
+    </div>
+    <div style="flex: 1 1 200px; background: rgba(0,0,0,0.5); padding: 2rem; border-radius: 12px;">
+      <i class="fas fa-university" style="font-size: 2.5rem; color: #f7941e;"></i>
+      <h3 style="margin-top: 1rem;">15+</h3>
+      <p>Partner SACCOs</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section mission-vision">
+  <h2 class="section-title">Our Mission, Vision & Demo</h2>
+  <div class="mv-row">
+
+    <!-- Mission -->
+    <div class="mv-card">
+      <div class="mv-icon" style="background-color: #f7941e;">
+        <i class="fas fa-bullseye"></i>
+      </div>
+      <h3>Our Mission</h3>
+      <p>
+        To deliver fast, secure, and reliable financial services through digital innovation for all our members.
+      </p>
+    </div>
+
+    <!-- Vision -->
+    <div class="mv-card">
+      <div class="mv-icon" style="background-color:  #3d505a;">
+        <i class="fas fa-eye"></i>
+      </div>
+      <h3>Our Vision</h3>
+      <p>
+        To become the most trusted SACCO in Africa empowering lives with inclusive mobile banking.
+      </p>
+    </div>
+
+    <!-- YouTube Video -->
+    <div class="mv-video">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/62Bp9up6apc?si=ddjbR7szibo0jpPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section style="background: linear-gradient(135deg, #3d505a,#f7941e); padding: 4rem 2rem; color: white; text-align: center; font-family: 'Poppins', sans-serif;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 2rem; text-shadow: 1px 1px 3px #222;">What Our Members Say</h2>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1000px; margin: 0 auto;">
+
+    <!-- Testimonial 1 -->
+    <div style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 2rem; border-radius: 20px; width: 280px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <i class="fas fa-quote-left" style="font-size: 1.5rem; color:#f7941e;"></i>
+      <p style="font-style: italic; margin: 1rem 0;">"e-Fund SACCO transformed the way I manage my savings. It's fast, safe, and reliable!"</p>
+      <h4 style="margin-top: 1rem; font-weight: 600; color: #ffffff;">Grace Namayanja</h4>
+      <p style="font-size: 0.9rem; color: #eee;">Market Vendor, Kisenyi</p>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 2rem; border-radius: 20px; width: 280px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <i class="fas fa-quote-left" style="font-size: 1.5rem; color: #f7941e;"></i>
+      <p style="font-style: italic; margin: 1rem 0;">"I can now access loans and manage group records from anywhere. Truly life-changing."</p>
+      <h4 style="margin-top: 1rem; font-weight: 600; color: #ffffff;">Moses Waiswa</h4>
+      <p style="font-size: 0.9rem; color: #eee;">Youth Group Leader, Mbale</p>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 2rem; border-radius: 20px; width: 280px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <i class="fas fa-quote-left" style="font-size: 1.5rem; color: #F47c2c;"></i>
+      <p style="font-style: italic; margin: 1rem 0;">"Thanks to e-Fund, our SACCO records are now organized and easily accessible on mobile."</p>
+      <h4 style="margin-top: 1rem; font-weight: 600; color: #ffffff;">Joyce Achieng</h4>
+      <p style="font-size: 0.9rem; color: #eee;">Treasurer, Women’s SACCO</p>
+    </div>
+</section>
+
+  </div>
+</section>
+
+
+  
+
+
+
+
+
+
+<section id="team" style="padding: 4rem 2rem; background: #f0f4f8; background-color: #acb5be; font-family: 'Segoe UI', sans-serif;">
+  <h2 style="text-align: center; font-size: 2.5rem; color: #3d505a; margin-bottom: 3rem;">Meet Our Team</h2>
+
+  <div style="
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  ">
+
+    <!-- Card Template -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="c:\Users\USER\Desktop\INTERN\New folder\download (4).jpeg" alt="Sarah Kintu">
+          <h3>MATOVU BRIAN</h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>MATOVU BRIAN</h3>
+          <p>Chief Technology Officer</p>
+          <p>Oversees platform development and team coordination.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="c:\Users\USER\Desktop\INTERN\New folder\download (4).jpeg" alt="James Okello">
+          <h3>SEKONO JOSEPH</h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>SSEKONO JOSEPH</h3>
+          <p>Technical Lead</p>
+          <p>Manages system architecture and integration.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="c:\Users\USER\Desktop\INTERN\New folder\download (4).jpeg" alt="Rita Nakato">
+          <h3>SEMITALA HAMID</h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>SEMITALA HAMID</h3>
+          <p>UI/UX Designer</p>
+          <p>Designs intuitive interfaces and user journeys.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="c:\Users\USER\Desktop\INTERN\New folder\download (4).jpeg" alt="Samuel Lutaaya">
+          <h3>KABEIRUNGI HELLEN</h3>
+        </div>
+        <div class="flip-card-back">
+          <h3>KABEIRUNGI HELLEN</h3>
+          <p>Finance Analyst</p>
+          <p>Ensures financial logic and reporting features.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .flip-card-front {
+    background-color: #ffffff;
+    color: #3d505a;
+  }
+
+  .flip-card-front img {
+    width: 120px;
+    height: 120px;
+    border-radius: 20%;
+    object-fit: cover;
+    border: 4px solid #3d505a;
+    margin-bottom: 1rem;
+  }
+
+  .flip-card-front h3 {
+    margin: 0;
+  }
+
+  .flip-card-back {
+    background-color: #f7941e;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back p {
+    margin: 0.4rem 0;
+  }
+</style>
+
+
+
+
+<section style="background-color: #f9f9f9; padding: 3rem 2rem; text-align: center; transform: translateY(30px); animation: fadeInUp 1s ease forwards; animation-delay: 1.2s;">
+  <h2 style="color:  #f7941e; font-size: 2rem; margin-bottom: 2rem;">Our Trusted Partners</h2>
+  
+  <div style= "display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+      <img src="c:\Users\USER\Desktop\INTERN\patner\download (3).png" alt="Partner 4" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download (2).jpeg" alt="Partner 1" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download.png" alt="Partner 2" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\images.jpeg" alt="Partner 3" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\images.png" alt="Partner 4" style="height: 80px;" />
+      <img src="c:\Users\USER\Desktop\INTERN\patner\New-mtn-logo.jpg" alt="Partner 3" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download (1).jpeg" alt="Partner 4" style="height: 80px;" />
+    <img src="c:\Users\USER\Desktop\INTERN\patner\download (2).png" alt="Partner 4" style="height: 80px;" />
+     <style>
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .partners-section img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+      opacity: 1;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</section>
+ 
+
+
+
+
+
+ <footer style="
+  background: url('https://images.unsplash.com/photo-1607082351780-0743e37b7d99?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+  background-blend-mode: lighten;
+  background-color: rgba(94, 88, 88, 0.9);
+  padding: 3rem 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+">
+
+  <div style="
+  
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    padding: 3rem 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  ">
+
+    <!-- Overview -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Overview</h3>
+      <p style="line-height: 1.6;">
+        mCash is a powerful platform designed to digitize SACCO operations. From onboarding to loans and reports, we bring smart finance tools to your fingertips.
+      </p>
+    </div>
+
+    <!-- Find Us with Map Link -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Find Us</h3>
+      <p style="line-height: 1.6;">
+        📍 
+        <a href="https://www.google.com/maps/place/AHA+Towers,+Kampala/@0.322041,32.584292,17z" target="_blank" style="color: #333; text-decoration: none;">
+          AHA Towers, Level 2, Nakasero, Kampala
+        </a><br>
+        📫 Plot 7 Louredel Building<br>
+        📧 info@mcash.ug
+           /  www.mcash.ug<br>
+
+        ☎️ +256 414233799
+      </p>
+    </div>
+
+    <!-- About Us -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">About Us</h3>
+      <p style="line-height: 1.6;">
+        We empower SACCOs and communities across Uganda with secure, user-friendly digital tools to manage finances, encourage savings, and foster financial inclusion.
+      </p>
+      <p>
+        <a href="https://www.mcash.ug" target="_blank" style="color: #f7941e; font-weight: bold; text-decoration: underline;">
+          🌐 Visit Official Site
+        </a>
+      </p>
+    </div>
+
+    <!-- Quick Links & Social -->
+    <div style="flex: 1 1 250px;">
+      <h3 style="color: #f7941e; font-size: 1.5rem; margin-bottom: 1rem;">Quick Links</h3>
+      <ul style="list-style: none; padding: 0; margin-bottom: 1rem;">
+        <li><a href="terms.html" style="color:  #3d505a; text-decoration: none;">📄 Terms & Conditions</a></li>
+        <li style="margin-top: 0.5rem;"><a href="privacy.html" style="color: #3d505a; text-decoration: none;">🔒 Privacy Policy</a></li>
+      </ul>
+
+      <h4 style="color: #f7941e; font-size: 1.2rem;">Follow Us</h4>
+      <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+        <a href="https://facebook.com" target="_blank" style="color: #3d505a; font-size: 1.4rem;"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank" style="color:  #3d505a; font-size: 1.4rem;"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank" style="color:  #3d505a; font-size: 1.4rem;"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+<p style="text-align: center; font-weight: bold;">&copy; 2025 e-Fund SACCO. All rights reserved.</p>
+
+
+  <style>
+    footer a:hover {
+      color: #f7941e !important;
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+    }
+    footer i:hover {
+      transform: scale(1.2);
+    }
+  </style>
+ 
+  
+
+ 
+</footer>
+
+</html>
